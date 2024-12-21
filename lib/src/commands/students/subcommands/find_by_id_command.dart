@@ -35,7 +35,7 @@ class FindByIdCommand extends Command {
     print('Idade:${student.age ?? 'nao informado'}');
     print('Curso:');
     student.nameCourses.forEach(print);
-    print('Endereço');
-    print('   ${student.address.street} ${student.address.zipCode}');
-  }
+  //  print('Endereço');
+  //  print('   ${student.address.street} ${student.address.zipCode}');
+  } 
 }

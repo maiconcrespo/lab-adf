@@ -4,7 +4,7 @@ import 'address.dart';
 import 'course.dart';
 
 class Students {
- final int id;
+ final int? id;
  final String name;
  final int? age;
  final List<String> nameCourses;
@@ -12,7 +12,7 @@ class Students {
  final Address address;
 
   Students(
-      {required this.id,
+      { this.id,
       required this.name,
       this.age,
       required this.nameCourses,
