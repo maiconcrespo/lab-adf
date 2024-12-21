@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'adress.dart';
+import 'address.dart';
 import 'course.dart';
 
 class Students {
@@ -9,7 +9,7 @@ class Students {
  final int? age;
  final List<String> nameCourses;
  final List<Course> courses;
- final Adress adress;
+ final Address address;
 
   Students(
       {required this.id,
@@ -17,7 +17,7 @@ class Students {
       this.age,
       required this.nameCourses,
       required this.courses,
-      required this.adress,
+      required this.address,
       });
 
   Map<String, dynamic> toMap() {
@@ -25,7 +25,7 @@ class Students {
       'id': id,
       'name': name,
       'nameCourses': courses.map((course) => course.toMap()).toList(),
-      'adress': adress,
+      'address': address.toMap(),
     };
     if (age != null) {
       map['age'] = age;
@@ -41,7 +41,7 @@ class Students {
       name:map['name']??'',
       age:map['age'],
       nameCourses: List<String>.from(map['nameCourses']??<String>{}),
-      adress : Adress.fromMap(map['adress']??<String,dynamic>{}),
+      address : Address.fromMap(map['address']??<String,dynamic>{}),
       courses :map['courses']
       ?.map<Course>((courseMap)=>Course.fromMap(courseMap))
       .toList() ?? <Course>[],
