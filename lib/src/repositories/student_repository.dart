@@ -46,7 +46,7 @@ class StudentRepository {
 
   Future<void> update(Students student) async {
     final response = await http.put(
-        Uri.parse('http://localhost:8080/${student.id}'),
+        Uri.parse('http://localhost:8080/students/${student.id}'),
         body: student.toJson(),
         headers: {'content-type': 'application/json'});
 
